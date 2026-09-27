@@ -1,0 +1,657 @@
+/* =========================================================
+   1. RESET & BASIC SETTINGS
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;   /* Makes navbar scrolling smooth */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Sets Poppins as the main font */
+    background: #080912;                /* Dark futuristic background */
+    color: white;                       /* Makes normal text white */
+    line-height: 1.6;                   /* Adds vertical space between lines */
+}
+
+
+/* =========================================================
+   2. NAVBAR
+   ========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: #080912;
+    border-bottom: 1px solid #25283a;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    width: 100%;
+    padding: 15px 40px;
+}
+
+.navbar h2 {
+    color: white;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    padding-left: 200px;
+}
+
+.menu a {
+    text-decoration: none; /* Removes underline from links */
+    color: white;           /* Makes links white */
+    font-weight: 500;       /* Makes links slightly bold */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.navbar a:hover {
+    color: #d05cff;         /* Changes link to purple */
+}
+
+
+/* =========================================================
+   3. HOME SECTION
+   ========================================================= */
+.availability{
+    color: #d05cff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.home {
+    min-height: 90vh;
+    padding: 50px;
+
+    display: flex;               /* Places content in a row */
+
+    max-width: 1200px;           /* Limits the width of the content */
+    max-height: 1000px;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home h1 {
+    color: #d05cff;
+}
+
+.home h2 {
+    padding-bottom: 10px;
+}
+
+.home p {
+    max-width: 1000px;            /* Limits the width of the paragraph */
+    margin-bottom: 20px;          /* Adds space below the paragraph */
+    color: #c1c1c1;               /* Makes paragraph text a lighter gray */
+}
+
+
+/* =========================================================
+   4. PROFILE PHOTO
+   ========================================================= */
+
+.profile-photo {
+    margin-left: 50px;
+}
+
+.photo {
+    border-radius: 10%;
+    width: 300px;
+    height: 350px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border: 5px solid white;
+}
+
+
+/* =========================================================
+   5. PROFILE CONTENT
+   ========================================================= */
+
+.profile-content {
+    padding: 20px;
+}
+
+.profile.content {
+    flex: 1;
+}
+
+
+/* =========================================================
+   6. BUTTONS
+   ========================================================= */
+
+.primary-btn {
+    margin-right: 20px;          /* Adds space to the right of the button */
+    background: #d05cff;         /* Purple background */
+    color: white;                /* White text */
+    padding: 12px 30px;          /* Adds space inside the button */
+
+    border: none;                /* Removes default border */
+    border-radius: 5px;           /* Rounds the corners */
+
+    cursor: pointer;              /* Changes cursor on hover */
+
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.secondary-btn {
+    background: transparent;      /* Transparent background */
+    color: #d05cff;               /* Purple text */
+    padding: 10px 20px;           /* Adds space inside the button */
+
+    border: 2px solid #d05cff;   /* Purple border */
+    border-radius: 5px;           /* Rounds the corners */
+
+    cursor: pointer;              /* Changes cursor on hover */
+
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* =========================================================
+   7. SOCIAL ICONS
+   ========================================================= */
+
+.social-icons {
+    display: flex;              /* Places icons in a row */
+    gap: 20px;                  /* Space between icons */
+    margin-top: 25px;            /* Space above icons */
+}
+
+.social-icons a {
+    color: white;               /* Icon color */
+    font-size: 24px;             /* Icon size */
+    text-decoration: none;       /* Removes underline */
+    transition: 0.3s;            /* Smooth hover effect */
+}
+
+.social-icons a:hover {
+    color: #d05cff;             /* Purple on hover */
+    transform: translateY(-3px); /* Moves icon slightly upward */
+}
+
+
+/* =========================================================
+   8. ABOUT SECTION
+   ========================================================= */
+
+.about {
+    padding: 50px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-content h3 {
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    color: #c1c1c1;
+}
+
+.about-me {
+    width: 40%;
+}
+
+.about-me h1 {
+    color: #d05cff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    color: #c1c1c1;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   9. SECTION HEADINGS
+   ========================================================= */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    color: #d05cff;
+    font-size: 30px;
+}
+
+.section-heading h1 {
+    color: #c1c1c1;
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   10. SKILLS
+   ========================================================= */
+
+.skills {
+    padding: 50px;
+    text-align: center;
+}
+
+.skills h2 {
+    color: #d05cff;
+    margin-bottom: 30px;
+}
+
+.skills-contents {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-contents p {
+    padding: 12px 20px;
+    background: #121522;
+    border: 1px solid #25283a;
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   11. HORIZONTAL LINE
+   ========================================================= */
+
+hr {
+    color: grey;
+    margin: 40px;
+}
+
+
+/* =========================================================
+   12. PROJECT CARD
+   ========================================================= */
+
+/* Main project card */
+
+.project-card {
+    width: 355px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    /* Dark background for the main content */
+    background: #141b2d;
+
+    /* Creates the subtle border visible around the card */
+    border: 1px solid #252d42;
+
+    /* Gives the card the lifted/glowing appearance */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   13. PROJECT CARD HEADER
+   ========================================================= */
+
+.card-header {
+    height: 160px;
+    padding: 22px;
+
+    /* Purple gradient creates the colorful top portion */
+    background: linear-gradient(
+        135deg,
+        #5b20d6,
+        #211b3d
+    );
+
+    position: relative;
+}
+
+
+/* Full Stack badge */
+
+.project-type {
+    display: inline-block;
+
+    padding: 5px 9px;
+    border-radius: 5px;
+
+    /* Slightly transparent white makes it blend with gradient */
+    background: rgba(255, 255, 255, 0.2);
+
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* Project date */
+
+.project-date {
+    position: absolute;
+    top: 25px;
+    right: 22px;
+
+    color: #eeeeee;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* Project name */
+
+.card-header h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 22px;
+
+    margin: 0;
+
+    color: white;
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   14. PROJECT CARD BODY
+   ========================================================= */
+
+.card-body {
+    padding: 22px;
+    color: #aeb6c8;
+}
+
+.card-body h4 {
+    margin: 0 0 10px;
+
+    color: #a85cff;
+
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.card-body p {
+    margin: 0 0 14px;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-body ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.card-body li {
+    margin-bottom: 8px;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   15. TECHNOLOGY TAGS
+   ========================================================= */
+
+.technologies {
+    display: flex;
+
+    /* Creates space between each technology */
+    gap: 7px;
+
+    margin-top: 30px;
+}
+
+.technologies span {
+    padding: 4px 7px;
+
+    border-radius: 3px;
+
+    background: #1d2639;
+
+    color: #cbd2df;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   16. PROJECT CARD FOOTER
+   ========================================================= */
+
+.card-footer {
+    display: flex;
+
+    /* Pushes Codebase to left and Demo to right */
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 18px;
+    padding-top: 14px;
+
+    /* Separates footer from technologies */
+    border-top: 1px solid #1e2739;
+}
+
+.card-footer a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card-footer .demo {
+    color: #cbd2df;
+    font-weight: normal;
+}
+
+
+/* =========================================================
+   17. ACHIEVEMENTS & CERTIFICATIONS
+   ========================================================= */
+
+.acheivements_and_certifications {
+    display: flex;
+    gap: 50px;
+}
+
+.achievement-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 1;
+    padding-left: 20px;
+}
+
+.certification-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 1;
+}
+
+.achievement-item {
+    background: #141b2d;
+    border: 1px solid #252d42;
+    border-radius: 10px;
+
+    padding: 20px;
+    width: 300px;
+
+    text-align: center;
+}
+
+.certification-item {
+    background: #141b2d;
+    border: 1px solid #252d42;
+    border-radius: 10px;
+
+    padding: 20px;
+    width: 300px;
+
+    text-align: center;
+}
+
+/* =====================================================
+   18. CONTACT SECTION
+   ===================================================== */
+
+.contact {
+    padding: 70px 50px;
+}
+
+/* Contact heading */
+
+.contact .section-title {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+
+/* Contact page layout */
+
+.contact-page {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   19. CONTACT INFORMATION
+   ===================================================== */
+
+.contact-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-container h3 {
+    color: #d05cff;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.contact-container > p {
+    color: #c1c1c1;
+    margin-bottom: 25px;
+}
+
+
+/* Contact information boxes */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+}
+
+.contact-blocks {
+    background: #141b2d;
+    border: 1px solid #252d42;
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+
+.contact-blocks p:first-child {
+    color: #d05cff;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contact-blocks p:last-child {
+    color: #c1c1c1;
+}
+
+
+/* =====================================================
+   20. CONTACT FORM
+   ===================================================== */
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px;
+}
+
+
+/* Input and textarea */
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: #121522;
+    border: 1px solid #25283a;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+
+/* Placeholder text */
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
+}
+
+
+/* When user clicks inside input */
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d05cff;
+}
+
+
+/* Message box */
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+
+/* Send button */
+
+.contact-form .primary-btn {
+    width: fit-content;
+    margin-right: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
